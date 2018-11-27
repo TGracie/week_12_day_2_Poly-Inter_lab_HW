@@ -1,5 +1,3 @@
-package Stalls;
-
 import java.util.ArrayList;
 
 public abstract class Stall { // going to implement ticketed

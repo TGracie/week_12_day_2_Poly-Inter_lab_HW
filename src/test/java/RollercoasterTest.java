@@ -1,4 +1,3 @@
-import Attractions.Rollercoaster;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,10 +6,16 @@ import static org.junit.Assert.assertEquals;
 public class RollercoasterTest {
 
     Rollercoaster typhoon;
+    Visitor vis;
+    Visitor vis2;
+    Visitor vis3;
 
     @Before
     public void before(){
-        typhoon = new Rollercoaster("Typhoon", 4, 150, 4, 60);
+        typhoon = new Rollercoaster("Typhoon", 4, 150, 14, 6, 60);
+        vis = new Visitor(14, 160, 50);
+        vis2 = new Visitor(13, 160, 50);
+        vis3 = new Visitor(14, 130, 50);
     }
 
     @Test
@@ -18,7 +23,7 @@ public class RollercoasterTest {
         assertEquals("Typhoon", typhoon.getName());
         assertEquals(4, typhoon.getRating());
         assertEquals(150, typhoon.getHeightLimit());
-        assertEquals(4, typhoon.getLength());
+        assertEquals(6, typhoon.getLength());
         assertEquals(60, typhoon.getCapacity());
     }
 
@@ -26,5 +31,20 @@ public class RollercoasterTest {
     public void setHeightLimit(){
         typhoon.setHeightLimit(160);
         assertEquals(160, typhoon.getHeightLimit());
+    }
+
+    @Test
+    public void visitorCanRide(){
+        assertEquals(true, typhoon.isAllowedTo(vis));
+    }
+
+    @Test
+    public void goAway(){
+        assertEquals(false, typhoon.isAllowedTo(vis2));
+    }
+
+    @Test
+    public void goAway2(){
+        assertEquals(false, typhoon.isAllowedTo(vis3));
     }
 }

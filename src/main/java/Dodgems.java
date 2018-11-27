@@ -1,7 +1,3 @@
-package Attractions;
-
-import Attractions.Attraction;
-
 public class Dodgems extends Attraction {
     private int capacity;
     private int heightLimit;
