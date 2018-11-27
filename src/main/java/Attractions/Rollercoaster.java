@@ -1,4 +1,8 @@
-public class Rollercoaster extends Attraction{
+package Attractions;
+
+import Attractions.Attraction;
+
+public class Rollercoaster extends Attraction {
 
     private int heightLimit;
     private int length;

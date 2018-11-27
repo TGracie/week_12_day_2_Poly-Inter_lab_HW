@@ -1,3 +1,7 @@
+package Attractions;
+
+import Attractions.Attraction;
+
 public class Playground extends Attraction { //implement security so needs something to work with that!
 
     private int maxAge;

@@ -1,3 +1,5 @@
+package Attractions;
+
 public abstract class Attraction { // going to implement IReviewed
 
     protected String name;
