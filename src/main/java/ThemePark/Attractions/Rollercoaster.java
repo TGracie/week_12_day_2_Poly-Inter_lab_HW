@@ -1,3 +1,9 @@
+package ThemePark.Attractions;
+
+import ThemePark.Interfaces.ISecurity;
+import ThemePark.Interfaces.ITicketed;
+import ThemePark.Visitor;
+
 public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
 
     private int heightLimit;

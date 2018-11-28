@@ -1,3 +1,7 @@
+package ThemePark.Stalls;
+
+import ThemePark.Interfaces.IReviewed;
+
 import java.util.ArrayList;
 
 public abstract class Stall implements IReviewed { // going to implement ticketed

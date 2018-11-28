@@ -1,3 +1,5 @@
+import ThemePark.Attractions.Playground;
+import ThemePark.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 

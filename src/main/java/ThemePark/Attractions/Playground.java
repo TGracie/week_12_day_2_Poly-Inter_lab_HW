@@ -1,3 +1,8 @@
+package ThemePark.Attractions;
+
+import ThemePark.Interfaces.ISecurity;
+import ThemePark.Visitor;
+
 public class Playground extends Attraction implements ISecurity { //implement security so needs something to work with that!
 
     private int maxAge;

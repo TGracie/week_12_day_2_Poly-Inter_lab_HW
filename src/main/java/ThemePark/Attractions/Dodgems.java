@@ -1,3 +1,5 @@
+package ThemePark.Attractions;
+
 public class Dodgems extends Attraction {
     private int capacity;
     private int heightLimit;

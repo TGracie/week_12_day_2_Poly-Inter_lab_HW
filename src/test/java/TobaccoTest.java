@@ -1,3 +1,5 @@
+import ThemePark.Stalls.Tobacco;
+import ThemePark.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
