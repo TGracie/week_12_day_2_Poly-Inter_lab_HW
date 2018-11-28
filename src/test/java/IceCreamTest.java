@@ -9,7 +9,7 @@ public class IceCreamTest {
 
     @Before
     public void before(){
-        stall = new IceCream("Luca", "Luke", 4);
+        stall = new IceCream("Luca", "Luke", 4, 4);
     }
 
     @Test

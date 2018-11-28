@@ -1,4 +1,4 @@
-public abstract class Attraction { // going to implement IReviewed
+public abstract class Attraction implements IReviewed { // going to implement IReviewed
 
     protected String name;
     protected int rating;

@@ -1,4 +1,4 @@
-public class Playground extends Attraction { //implement security so needs something to work with that!
+public class Playground extends Attraction implements ISecurity { //implement security so needs something to work with that!
 
     private int maxAge;
 
@@ -13,6 +13,13 @@ public class Playground extends Attraction { //implement security so needs somet
 
    public void setMaxAge(int age){
         this.maxAge = age;
+   }
+
+   public boolean isAllowedTo(Visitor vis){
+        if(vis.getAge() >= 15){
+            return false;
+        }
+        return true;
    }
 
 

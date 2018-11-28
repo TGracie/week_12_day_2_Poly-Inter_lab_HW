@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 
-public abstract class Stall { // going to implement ticketed
+public abstract class Stall implements IReviewed { // going to implement ticketed
 
     protected String name;
     protected String owner;
     protected int parkingSpace;
+    protected int rating;
     protected ArrayList<String> items;
 
-    public Stall(String name, String owner, int parkingSpace){
+    public Stall(String name, String owner, int parkingSpace, int rating){
      this.name = name;
      this.owner = owner;
      this.parkingSpace = parkingSpace;
+     this.rating = rating;
      this.items = new ArrayList<>();
     }
 
@@ -22,7 +24,11 @@ public abstract class Stall { // going to implement ticketed
         this.name = newName;
     }
 
-    public String owner(){
+    public int getRating(){
+        return this.rating;
+    }
+
+    public String getOwner(){
         return this.owner;
     }
 

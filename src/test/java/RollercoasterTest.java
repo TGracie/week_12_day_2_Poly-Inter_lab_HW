@@ -12,10 +12,10 @@ public class RollercoasterTest {
 
     @Before
     public void before(){
-        typhoon = new Rollercoaster("Typhoon", 4, 150, 14, 6, 60);
+        typhoon = new Rollercoaster("Typhoon", 4, 150, 14, 6, 60, 10.00);
         vis = new Visitor(14, 160, 50);
         vis2 = new Visitor(13, 160, 50);
-        vis3 = new Visitor(14, 130, 50);
+        vis3 = new Visitor(16, 130, 50);
     }
 
     @Test
@@ -46,5 +46,11 @@ public class RollercoasterTest {
     @Test
     public void goAway2(){
         assertEquals(false, typhoon.isAllowedTo(vis3));
+    }
+
+    @Test
+    public void differentPrices(){
+        assertEquals(7.50, typhoon.priceForVisitor(vis), 0.1);
+        assertEquals(10.00, typhoon.priceForVisitor(vis3), 0.1);
     }
 }

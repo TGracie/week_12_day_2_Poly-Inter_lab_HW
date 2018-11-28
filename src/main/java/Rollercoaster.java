@@ -1,16 +1,18 @@
-public class Rollercoaster extends Attraction implements ISecurity {
+public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
 
     private int heightLimit;
     private int ageLimit;
     private int length;
     private int capacity;
+    private double price;
 
-    public Rollercoaster(String name, int rating, int heightLimit, int ageLimit, int length, int capacity){
+    public Rollercoaster(String name, int rating, int heightLimit, int ageLimit, int length, int capacity, double price){
         super(name, rating);
         this.heightLimit = heightLimit;
         this.ageLimit = ageLimit;
         this.length = length;
         this.capacity = capacity;
+        this.price = price;
     }
 
     public boolean isAllowedTo(Visitor visitor){
@@ -18,6 +20,17 @@ public class Rollercoaster extends Attraction implements ISecurity {
             return true;
         }
         return false;
+    }
+
+    public double defaultPrice(){
+        return this.price;
+    }
+
+    public double priceForVisitor(Visitor vis){
+        if(vis.getAge() < 16){
+            return (this.price * 0.75);
+        }
+            return this.price;
     }
 
     public int getHeightLimit(){
